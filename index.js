@@ -3,10 +3,15 @@ import models from './models/index'
 import bodyParser from 'body-parser'
 import { graphiqlExpress, graphqlExpress } from 'apollo-server-express'
 import { makeExecutableSchema } from 'graphql-tools'
-import typeDefs from './schema'
+
 import resolvers from './resolvers'
 
-console.log(typeof typeDefs);
+import path from 'path'
+import { fileLoader, mergeTypes } from 'merge-graphql-schemas'
+
+const typesArray = fileLoader(path.join(__dirname, './schema'));
+const typeDefs = mergeTypes(typesArray);
+
 const myExecutableSchema = makeExecutableSchema({
   typeDefs,
   resolvers,

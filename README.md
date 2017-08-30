@@ -1,9 +1,9 @@
 # TODO-SERVER
 
-## Database and ORM used respectively:
+### Relational database management system (rdms) and object-relational mapping (ORM) used respectively:
 * Mysql
 * Sequelize 
 
-## Server side framework used:
-* apollo grahpql server
-
+### Server side framework used:
+* Expressjs
+* graphql apollo-server

@@ -9,6 +9,7 @@ export default (sequelize, DataTypes) => {
     console.log(models);
     Sections.hasMany(models.Tasks, {
       foreignKey: 'taskId',
+      sourceKey: 'id',
     });
   };
   return Sections;
