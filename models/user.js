@@ -1,18 +1,19 @@
 export default (sequelize, DataTypes) => {
-  const Users = sequelize.define('users', {
+  const User = sequelize.define('user', {
     username:{type: DataTypes.STRING, notNull: true, unique: true,},
     firstName: {type: DataTypes.STRING, notNull: true,},
     lastName: {type: DataTypes.STRING, notNull: true,},
     phoneNumber: {type: DataTypes.STRING,},
-  });
+    email: {type: DataTypes.STRING, notNull: true, unique: true},
+    password: {type: DataTypes.STRING,}
+  }, {tableName: 'user'});
 
-  Users.associate = (models) => {
-    console.log(models);
-    Users.hasMany(models.Sections, {
+  User.associate = (models) => {
+    User.hasMany(models.Sections, {
       foreignKey: 'sectionId',
       sourceKey: 'id',
     });
   };
 
-    return Users;
+    return User;
 };

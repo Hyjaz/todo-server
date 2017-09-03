@@ -6,7 +6,6 @@ export default (sequelize, DataTypes) => {
   });
 
   Sections.associate = (models) => {
-    console.log(models);
     Sections.hasMany(models.Tasks, {
       foreignKey: 'taskId',
       sourceKey: 'id',
