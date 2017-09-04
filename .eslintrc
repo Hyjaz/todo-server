@@ -4,6 +4,6 @@
         "no-param-reassign":"off",
         "no-console":"off",
         "prefer-destructuring":"off",
-        "import/prefer-default-export":"off"
+        "import/prefer-default-export":"warn"
     }
 }

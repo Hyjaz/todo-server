@@ -4,7 +4,7 @@ import { requiresAuth } from '../../permissions';
 
 export default {
   User: {
-    sections: requiresAuth.createResolver(({ id }, args, { models }) => (
+    sections: requiresAuth.createResolver(async ({ id }, args, { models }) => (
       models.Sections.findAll({ where: { sectionId: id } }))),
   },
   Query: {
