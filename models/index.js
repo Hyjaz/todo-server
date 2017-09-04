@@ -30,7 +30,7 @@ process.on('unhandledRejection', (reason, p) => {
 
 const db = {
   Sections: sequelize.import('./sections'),
-  Users: sequelize.import('./users'),
+  User: sequelize.import('./user'),
   Tasks: sequelize.import('./tasks'),
 };
 

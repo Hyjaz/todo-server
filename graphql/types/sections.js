@@ -5,7 +5,7 @@ export default `
     createdAt: String!
     updatedAt: String!
     sectionId: Int!
-    tasks: [Tasks!]!
+    tasks: [Tasks!]
   }
 
   type Mutation {
