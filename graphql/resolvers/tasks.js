@@ -1,7 +1,9 @@
+import { requiresAuth } from '../../permissions'
+
 export default {
   Mutation: {
-    createTask: async (parent, args, { models }) => {
+    createTask: requiresAuth.createResolver(async (parent, args, { models }) => {
       return await models.Tasks.create(args)
-    },
+    }),
   },
 }
