@@ -1,8 +1,8 @@
 export default (sequelize, DataTypes) => {
   const Sections = sequelize.define('sections', {
-    states: {type: DataTypes.STRING, notNull: true,},
-    createdAt: {type: DataTypes.DATE, notNull: true,},
-    updatedAt: {type: DataTypes.DATE, notNull: true,},
+    states: { type: DataTypes.STRING, notNull: true },
+    createdAt: { type: DataTypes.DATE, notNull: true },
+    updatedAt: { type: DataTypes.DATE, notNull: true },
   });
 
   Sections.associate = (models) => {
@@ -12,4 +12,4 @@ export default (sequelize, DataTypes) => {
     });
   };
   return Sections;
-}
+};
